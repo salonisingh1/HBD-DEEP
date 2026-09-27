@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27 September 2026 — Happy Birthday Baby 💗</title>
+    <meta name="description" content="A little birthday universe made especially for Deepak.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'birthday_app/style.css' %}">
+</head>
+<body>
+    <div class="hearts" aria-hidden="true"></div>
+
+    <header class="hero">
+        <div class="date-pill">27 • 09 • 2026</div>
+        <p class="eyebrow">TODAY IS YOUR DAY, BABY ✨</p>
+        <h1>Happy Birthday,<br><span>Deepak</span> 💗</h1>
+        <p class="hero-sub">A tiny corner of the internet made for the person who somehow became my favourite person.</p>
+        <button class="primary-btn" id="startBtn">Open your birthday surprise ↓</button>
+        <div class="scroll-hint">made with too much love & a little bit of pagalpan</div>
+    </header>
+
+    <main id="surprise">
+        <section class="story section">
+            <div class="section-label">01 — OUR LITTLE STORY</div>
+            <h2>Somehow, <em>us</em> happened.</h2>
+            <div class="story-grid">
+                <article class="story-card">
+                    <div class="icon">🌱</div>
+                    <h3>It started randomly</h3>
+                    <p>We weren't looking for anything. We were just good friends… and then life casually decided to surprise me with you.</p>
+                </article>
+                <article class="story-card featured">
+                    <div class="icon">🌙</div>
+                    <h3>And then came that night</h3>
+                    <p>The night you stayed with me changed something I can't really explain. Somehow, after that, everything felt a little different.</p>
+                </article>
+                <article class="story-card">
+                    <div class="icon">🫶</div>
+                    <h3>And now… you</h3>
+                    <p>I feel so relaxed, comfortable, and protected around you. It just comes naturally — I don't even have to think about it.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="love section">
+            <div class="section-label">02 — THINGS I LOVE ABOUT YOU</div>
+            <h2>Tap a card. I have things to say. 👀</h2>
+            <div class="love-grid">
+                <button class="love-card" data-message="You have this calm energy that makes everything feel less heavy.">
+                    <span>🌊</span><strong>Your calm</strong><small>tap me</small>
+                </button>
+                <button class="love-card" data-message="That day when someone's cloth fell on the ground and you didn't just pick it up — you even put a cloth pin on it. I remember thinking, 'yrrr, ye kitna pyara hai.' 🥹💗">
+                    <span>🧷</span><strong>That little kindness</strong><small>tap me</small>
+                </button>
+                <button class="love-card" data-message="The way you say things — 'jooth nahi bolunga' 😂 — and then that 'haan ji'. Somehow these tiny things stay in my mind all day.">
+                    <span>🥹</span><strong>Your little things</strong><small>tap me</small>
+                </button>
+                <button class="love-card" data-message="And yes… when you get angry, you somehow do that well too hahaha. 😂 That side of you also looks cute to me.">
+                    <span>😤😂</span><strong>Your angry side</strong><small>tap me</small>
+                </button>
+            </div>
+            <div id="loveReveal" class="reveal-box hidden"></div>
+        </section>
+
+        <section class="game section">
+            <div class="section-label">03 — THE VERY SERIOUS TEST</div>
+            <h2>How well do you know <em>us</em>?</h2>
+            <p class="muted">A tiny test about the things that live rent-free in my head. 👀💗</p>
+            <div class="quiz-box" id="quizBox">
+                <div class="quiz-top"><span id="questionNumber">Question 1/5</span><span id="scoreText">Score: 0</span></div>
+                <h3 id="question"></h3>
+                <div id="answers" class="answers"></div>
+                <button class="next-btn hidden" id="nextBtn">Next →</button>
+                <div id="quizResult" class="hidden"></div>
+            </div>
+        </section>
+
+        <section class="pickup section">
+            <div class="section-label">04 — PICKUP LINE DEPARTMENT</div>
+            <h2>Because apparently one is never enough.</h2>
+            <div class="pickup-card">
+                <div class="sparkle">✦</div>
+                <p id="pickupLine">Click the button. I dare you.</p>
+                <button class="secondary-btn" id="pickupBtn">Give me another 😌</button>
+            </div>
+        </section>
+
+        <section class="meme section">
+            <div class="section-label">05 — OFFICIAL BIRTHDAY MEME</div>
+            <div class="meme-card">
+                <div class="meme-top">ME: I will behave normally today.</div>
+                <div class="meme-big">ALSO ME:<br><span>HAPPY BIRTHDAY BABYYYYYYYYY 😭💗</span></div>
+                <div class="meme-bottom">because apparently loving you comes with zero chill.</div>
+            </div>
+        </section>
+
+        <section class="letter section">
+            <div class="section-label">06 — ONE LAST THING</div>
+            <div class="letter-paper">
+                <div class="letter-date">27 September 2026</div>
+                <h2>To my Baby,</h2>
+                <p>Happy birthday to the person who somehow became such a big part of my everyday life.</p>
+                <!-- <p>I feel so relaxed, comfortable, and protected around you — and it comes naturally. I don't have to try to feel that way with you.</p> -->
+                <!-- <p>The way you say things — <em>“jooth nahi bolunga”</em> 😂 — that little <em>“haan ji”</em>, and all those tiny things you do… they stay in my mind daily because I am missing you so much. I miss you every day, like it has quietly become a habit, a part of my daily routine.</p> -->
+                <p>I didn't write this in the video, but I spent some of the happiest moments of my life with you. <strong>It's you. You only.</strong> ❤️</p>
+                <div class="shayari">
+                    <p>Ek mulaaqat thi, jo yaad ban gayi,<br>
+                    Ek raat thi, jo jazbaat ban gayi,<br>
+                    Pata hi nahi chala kab tum itne khaas ho gaye,<br>
+                    Ki tumhari khushi, meri khushi ban gayi.</p>
+                </div>
+                <p class="signature"><strong>I LOVE YOU ❤️</strong><br><br>HBD BABY 🥹🎂💗<br><strong>— SSR</strong></p>
+            </div>
+        </section>
+
+        <section class="final section">
+            <div class="final-heart">♥</div>
+            <p class="eyebrow">ONE MORE TIME, JUST BECAUSE</p>
+            <h2>HAPPY BIRTHDAY<br><span>MY BABY, DEEPAK.</span></h2>
+            <button class="primary-btn" id="celebrateBtn">CELEBRATE US 🎉</button>
+            <p class="tiny">P.S. You are officially required to smile now. I LOVE YOU. 🥹💗</p>
+        </section>
+    </main>
+
+    <div class="modal hidden" id="messageModal">
+        <div class="modal-card">
+            <button class="close" id="closeModal">×</button>
+            <div class="modal-heart">💗</div>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <script src="{% static 'birthday_app/app.js' %}"></script>
+</body>
+</html>
