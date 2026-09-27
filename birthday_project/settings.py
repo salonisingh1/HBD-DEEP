@@ -1,10 +1,18 @@
 from pathlib import Path
+import os 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "deepak-birthday-local-demo-secret-key"
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+   ".vercel.app",
+    "localhost",
+    "127.0.0.1",
+]
+
+if os.environ.get("VERCEL_URL"):
+    ALLOWED_HOSTS.append(os.environ["VERCEL_URL"])
 
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
@@ -48,3 +56,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.vercel.app",
+]
